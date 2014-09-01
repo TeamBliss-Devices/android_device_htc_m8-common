@@ -80,6 +80,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/com.htc.software.market.xml:system/etc/permissions/com.htc.software.market.xml
 
 
+# DevicHandler
+PRODUCT_PACKAGES += \
+    DeviceHandler
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
