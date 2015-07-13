@@ -303,6 +303,21 @@
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,2097152,262144,524288,1048576</string>
+   
+    <!-- Ambient Display : Dream of Notifications -->
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+    <bool name="config_dozeAfterScreenOff">true</bool>
+    <!--bool name="config_powerDecoupleAutoSuspendModeFromDisplay">false</bool-->
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    <bool name="config_dreamsSupported">true</bool>
+    
+    <!-- Doze: force using accelerometer as pick up sensor -->
+    <bool name="config_dozeUseAccelerometer">true</bool>
+    
+    <!-- Enable the option to check proximity sensor when deciding whether to
+    turn the screen on
+    NOTE ! - Enable for devices that have a fast response proximity sensor-->
+    <bool name="config_proximityCheckOnWake">true</bool>    
 
     <!-- Configure mobile tcp buffer sizes in the form:
          rat-name:rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max
@@ -320,8 +335,11 @@
         <item>evdo_b:4094,87380,262144,4096,16384,262144</item>
     </string-array>
 
+<<<<<<< HEAD
     <!-- Default values for display color temperature -->
     <integer name="config_dayColorTemperature">7000</integer>
     <integer name="config_nightColorTemperature">4000</integer>
 
+=======
+>>>>>>> 319235c... Fix ambient display.
 </resources>
