@@ -48,12 +48,13 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 --tags_offset 0x01e00000
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
+
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
