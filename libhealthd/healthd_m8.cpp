@@ -17,9 +17,9 @@
 
 #include <healthd.h>
 
-static int mapChargeRateString(const char *charge_rate)
+static int mapChargeRateString(const char *Fast)
 {
-    if (strcmp(charge_rate, "Turbo") == 0)
+    if (strcmp(Fast, "1") == 0)
         return android::BATTERY_CHARGE_RATE_FAST_CHARGING;
     else
         return android::BATTERY_CHARGE_RATE_UNKNOWN;
@@ -27,7 +27,7 @@ static int mapChargeRateString(const char *charge_rate)
 
 void healthd_board_init(struct healthd_config *config)
 {
-    config->batteryChargeRatePath  = "/sys/class/power_supply/battery/charge_rate";
+    config->batteryChargeRatePath  = "/sys/class/power_supply/battery/charge_type";
     config->mapChargeRateString    = mapChargeRateString;
 }
 
