@@ -17,9 +17,9 @@
 
 #include <healthd.h>
 
-static int mapChargeRateString(const char *Fast)
+static int mapChargeRateString(const char *charge_type)
 {
-    if (strcmp(Fast, "1") == 0)
+    if (strcmp(charge_type, "Fast") == 0)
         return android::BATTERY_CHARGE_RATE_FAST_CHARGING;
     else
         return android::BATTERY_CHARGE_RATE_UNKNOWN;
